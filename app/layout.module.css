@@ -1,0 +1,22 @@
+.header {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 8px;
+    border-bottom: 1px solid #132f52;
+}
+
+
+.nav{
+    padding: 8px;
+   
+}
+
+.nav a{
+    padding: 8px;
+}
+
+
+.contents {
+    padding: 16px;
+}
