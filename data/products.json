@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1234",
+        "name": "청바지222",
+        "price":5000,
+        "imgNm" : "https://www.shutterstock.com/shutterstock/photos/2027804696/display_1500/stock-photo-blue-denim-jeans-texture-denim-background-texture-for-design-canvas-denim-texture-blue-denim-2027804696.jpg"
+    },
+    {
+        "id": "1235",
+        "name": "티셔츠22",
+        "price" : 4000,
+        "imgNm" : "https://www.shutterstock.com/shutterstock/photos/1938030154/display_1500/stock-photo-hispanic-young-man-wearing-a-black-casual-t-shirt-side-view-behind-and-front-view-of-a-mock-up-1938030154.jpg"
+    },
+    {
+        "id": "1236",
+        "name": "부츠",
+        "price":6000,
+        "imgNm" : "https://www.shutterstock.com/shutterstock/photos/2200678719/display_1500/stock-photo-hiking-boot-female-legs-with-leather-ankle-shoes-and-knitted-wool-socks-on-mountain-peak-during-2200678719.jpg"
+    }
+]

@@ -1,18 +1,29 @@
-import { notFound } from "next/navigation";
+import { getProduct, getProducts } from "@/service/products";
+import { notFound, redirect } from "next/navigation";
+import Image from 'next/image'
+import GoProductButton from "@/components/GoProductButton";
 
 type Props = {
     params : {
-        slug: String;
+        slug: string;
     }
 };
 
-export default function pantsPage({params}: Props) {
-    if (params.slug === 'nothing'){
-        notFound();
+export default async function productPage({params : {slug}}: Props) {
+    
+    const product = await getProduct(slug);
+
+    if(!product) {
+        redirect('/products');
+        //notFound();
     }
+
     return (
         <div>
-            {params.slug}  제품소계 페이지입니다. !!
+            {product.name}  제품소계 페이지입니다. !!
+            <Image src={product.imgNm} alt={product.name} width={400}
+        height={400}></Image>
+        <GoProductButton></GoProductButton>
         </div>
     );
 }
@@ -26,11 +37,11 @@ export function generateMetadata({params}: Props) {
 }
 
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
 
-    const products = ['pants', 'skirt'];
+    const products = await getProducts();
     return products.map(product => ({
-        slug : product
+        slug : product.id
 
 
     }))
